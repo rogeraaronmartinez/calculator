@@ -1,7 +1,33 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #0a1f1a;
     font-family: monospace;
+    padding-top: 50px;
+    overflow: hidden;
 }
+
+
+
+h1 {
+    color: #ff4500;
+    animation-duration: 2s;
+    animation-name: textFlyIn;
+}
+
+@keyframes textFlyIn {
+    from {
+        margin-top: 100%;
+        height: 500%;
+    }
+    to {
+        margin-top: 0%;
+        height: 100%;
+    }
+}
+
 
 .calculator {
     display: flex;
@@ -9,9 +35,47 @@ body {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
+    border-style: ridge;
+    border-radius: 2px;
+    width: 479px;
+    animation-duration: 2s;
+    animation-name: flyIn;
 }
 
+@keyframes flyIn {
+    from {
+        margin-top: 100%;
+        height: 500%;
+    }
+    to {
+        margin-top: 0%;
+        height: 100%;
+    }
+}
+
+.previous-operation-screen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: center;
+    font-size: 14px;
+    height: 20px;
+    width: 479px;
+    background-color: #169651; 
+}
+
+.current-operation-screen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: center;
+    font-size: 28px;
+    height: 40px;
+    width: 479px;
+    background-color: #169651; 
+}
 .operator-buttons {
     display: flex;
     flex-direction: row;
@@ -44,24 +108,3 @@ body {
     background-color: #ff4500;
 }
 
-.previous-operation-screen {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    font-size: 14px;
-    height: 20px;
-    width: 480px;
-    background-color: #169651; 
-}
-
-.current-operation-screen {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    font-size: 28px;
-    height: 40px;
-    width: 480px;
-    background-color: #169651; 
-}
